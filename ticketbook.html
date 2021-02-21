@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Passenger Signin page</title>
+  <link rel="stylesheet" href="regstyle1.css">
+</head>
+<body style="background-image: url(aeroplane.jpg)" >
+  <div class="container0">
+      <h2>Airway Ticket Booking</h2>
+  </div>
+   <div  class="container">
+    <form onsubmit="return action1()" action="final_ticket_book_ackno.html" class="form-inline">
+    <div id="lain">
+        <label for="pnr" >PNR NO</label><br> 
+        <p id="pnr"></p>
+    </div>
+    <div id="lain">
+        <label for="td">Travel Date</label>
+        <input type="date" id="td">
+    </div>
+    <div id="lain">
+       <label for="src">Source </label><br>
+       <input type="text" id="src">
+    </div>
+    <div id="lain">     
+       <label for="des">Destination</label>
+       <input type="text" id="des">
+    </div>
+    <div id="lain">
+       <label>Status: </label>
+       <select id = "status">
+               <option value = "1">New</option>
+               <option value = "2">Confirm</option>
+               <option value = "3">Hold</option> 
+       </select>
+    </div>
+    <div id="lain"> 
+        <label>Seat Preference:  </label>
+        <select id = "seatpref">
+               <option value = "1">Window</option>
+               <option value = "2">Middle</option>
+               <option value = "3">Aisle</option>
+        </select>
+     </div> 
+     <div id="lain">
+         <label>Meal Preference:  </label>
+         <select id = "mealpref">
+               <option value = "1">Veg</option>
+               <option value = "2">Non-Veg</option>
+        </select>
+    </div>
+    <div id="lain">
+        <button id="submit">Book Ticket</button>
+    </div>
+    
+     </form>
+    </div>
+    <script>
+          document.getElementById("pnr").innerHTML=Math.floor(Math.random() * (9999999 - 1000000 + 1) ) + 1000000 ;
+           var td=document.getElementById("td");     
+          var src=document.getElementById("src");
+          var des=document.getElementById("des");
+          var status=document.getElementById("status");
+        var seatpref=document.getElementById("seatpref");
+        var mealpref=document.getElementById("mealpref");
+        function action1() {
+            if(src.value.trim()==""||des.value.trim()==""||td.value==""){
+                alert("Please fill all the details");
+                return false;
+            }
+            else
+                return true;
+        }
+          
+        
+    </script>
+</body>
+</html>

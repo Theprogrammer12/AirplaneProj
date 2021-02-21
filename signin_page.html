@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+<head>
+     <title>SignIn Page</title>
+     <link rel="stylesheet" href="regstyle2.css">
+</head>
+<body>
+
+
+
+<div id="id01" class="modal">
+ 
+  <form class="modal-content" action="ticketbook.html">
+    <div class="container">
+      <h1>Passenger Sign In</h1>
+      
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="location.href='regis_ack.html'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+   <script>
+       document.getElementById('id01').style.display='block'
+    </script>
+    </body>
+</html>
